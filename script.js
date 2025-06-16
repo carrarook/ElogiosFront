@@ -47,7 +47,7 @@ async function gerarNovoElogio() {
 
     } catch (error) {
         console.error("Ocorreu um erro:", error);
-        elogioTextoElement.textContent = 'Ops, algo deu errado! Verifique o console (F12) para mais detalhes.';
+        elogioTextoElement.textContent = 'Ops, algo deu errado! Ligue pro Brunin';
     } finally {
         // Desativa o estado de "carregando", independentemente de sucesso ou erro
         gerarBotao.disabled = false;
