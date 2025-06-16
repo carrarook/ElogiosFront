@@ -1,7 +1,7 @@
 // --- Interatividade (O JavaScript "Mágico") ---
 
 // IMPORTANTE: Altere esta URL para o endereço da sua API!
-const API_URL = "https://elogio-api-294345468765.us-central1.run.app"; // Verifique a porta no seu projeto .NET
+const API_URL = "https://elogio-api-service-294345468765.us-central1.run.app"; // Verifique a porta no seu projeto .NET
 
 // Pegando os elementos da página que vamos manipular
 const container = document.getElementById('container-principal');
