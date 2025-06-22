@@ -8,9 +8,17 @@
     --sombra-card: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+
+
 body {
+
+    background-color: #DD2DE3;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23DD2DE3'/%3E%3Cstop offset='1' stop-color='%23DD2DE3'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23F37BFF' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23F37BFF' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+
     font-family: 'Nunito', sans-serif;
-    background-color: var(--cor-fundo);
+    
     color: var(--cor-texto);
     margin: 0;
     font-weight: bold;
@@ -31,6 +39,7 @@ body {
     max-width: 450px;
     width: 100%;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    border: solid whitesmoke;
 }
 
 .container.loading {
@@ -89,4 +98,86 @@ h1 {
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+}
+
+
+
+
+/* Estilos para os novos formulários e resultados */
+.form-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-section h2 {
+    margin: 0;
+    color: var(--cor-principal);
+    border-bottom: 2px solid var(--cor-principal);
+    padding-bottom: 10px;
+}
+.form-section input, .form-section textarea, .form-section button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+}
+.form-section textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+.form-section button {
+    background-color: var(--cor-principal);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.separator {
+    border: none;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 30px 0;
+}
+.link-voltar {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--cor-principal);
+    font-weight: bold;
+}
+.status-message {
+    font-weight: bold;
+    min-height: 1.2rem;
+}
+#resultados h2, #resultados h3 {
+    color: var(--cor-principal);
+}
+/* --- ESTILOS PARA O GRID DE RESULTADOS (VERSÃO RESPONSIVA MELHORADA) --- */
+.results-grid {
+    display: grid;
+    /* Esta é a linha mágica para a responsividade */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px; /* Aumenta um pouco o espaçamento */
+    margin-top: 20px;
+}
+
+.results-grid img {
+    width: 100%;
+    /* A altura será proporcional à largura, criando quadrados perfeitos */
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; /* Garante que a imagem preencha o quadrado sem distorcer */
+    border-radius: 12px; /* Bordas um pouco mais arredondadas */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.results-grid img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }

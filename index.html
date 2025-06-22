@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teté</title>
-    
+    <title>Menu Principal</title>
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo adicional para os botões do menu */
+        .menu-options {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+        .menu-button {
+            display: block;
+            padding: 20px;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-
-    <div class="container" id="container-principal">
-        <h1>For my big love</h1>
-
-        <img id="elogio-foto" src="" alt="hehehe surpresa vvindo">
-
-        <p id="elogio-texto">Clique no botão para gerar um elogio!</p>
-
-        <button id="btn-gerar">Gerar Novo ✨</button>
+    <div class="container">
+        <h1>Menu Principal</h1>
+        <div class="menu-options">
+            <a href="aleatorio.html" class="btn-gerar menu-button">Aleatório ✨</a>
+            <a href="adicionar.html" class="btn-gerar menu-button">Adicionar Novo ➕</a>
+            <a href="procurar.html" class="btn-gerar menu-button">Procurar 🔎</a>
+        </div>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

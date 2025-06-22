@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procurar Conteúdo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Procurar por Data</h1>
+        <form id="form-procurar" class="form-section">
+            <input type="date" id="data-inicio" required>
+            <input type="date" id="data-fim" title="Deixe em branco para buscar por um dia específico">
+            <button type="submit">Procurar</button>
+        </form>
+
+        <hr class="separator">
+
+        <div id="resultados">
+            <h2>Resultados</h2>
+            <div id="resultados-elogios"></div>
+            <div id="resultados-fotos"></div>
+        </div>
+        <a href="index.html" class="link-voltar">Voltar ao Menu</a>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script_procurar.js"></script>
+</body>
+</html>

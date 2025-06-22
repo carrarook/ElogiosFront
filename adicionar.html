@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Conteúdo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Adicionar Novo</h1>
+        
+        <form id="form-add-frase" class="form-section">
+            <h2>Nova Frase</h2>
+            <textarea id="texto-frase" placeholder="Digite a frase aqui..." required></textarea>
+            <input type="date" id="data-frase" required>
+            <button type="submit">Salvar Frase</button>
+            <p id="status-frase" class="status-message"></p>
+        </form>
+
+        <hr class="separator">
+
+        <form id="form-add-foto" class="form-section">
+            <h2>Nova Foto</h2>
+            <input type="file" id="arquivo-foto" accept="image/*" required>
+            <input type="date" id="data-foto" required>
+            <!-- <input type="number" id="id-link-elogio" placeholder="ID do elogio para linkar (opcional)"> -->
+            <button type="submit">Salvar Foto</button>
+            <p id="status-foto" class="status-message"></p>
+        </form>
+
+        <a href="index.html" class="link-voltar">Voltar ao Menu</a>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script_adicionar.js"></script>
+</body>
+</html>
